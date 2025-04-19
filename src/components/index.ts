@@ -1,0 +1,1 @@
+export {default as ProcessComponent} from './process.component';

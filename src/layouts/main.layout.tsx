@@ -7,7 +7,7 @@ const MainLayout = () => {
     <>
       <HeaderPartial />
       <section>
-        <aside className="bg-gray-50 fixed top-0 left-0 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0">
+        <aside className="bg-gray-50 fixed top-0 left-0 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0 z-40">
           <AsidePartial />
         </aside>
         <main className="bg-sky-200 p-4 sm:ml-64">

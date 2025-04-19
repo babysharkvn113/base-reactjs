@@ -1,6 +1,9 @@
 @import 'tailwindcss';
 
 @theme {
+    --text-tiny: 12px;
+    --leading-tiny: 17px;
+
     --text-sm: 13px;
     --leading-sm: 18px;
 
@@ -8,9 +11,12 @@
     --leading-base: 19px;
 }
 
-body{
+body {
     @apply outline-none text-base leading-base;
 }
-a,img, nav{
+
+a,
+img,
+nav {
     @apply select-none;
 }
