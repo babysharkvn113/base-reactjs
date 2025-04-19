@@ -9,8 +9,5 @@ export default defineConfig({
     react(), 
     tailwindcss(),
     tsconfigPaths()
-  ],
-  server: {
-    host: true
-  }
+  ]
 })
