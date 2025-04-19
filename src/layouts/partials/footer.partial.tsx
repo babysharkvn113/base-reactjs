@@ -1,11 +1,13 @@
-import {appIcons} from "@configs/index"
+import { appConfigs, appIcons } from "@configs/index"
 import { NavLink } from "react-router-dom"
 const FooterPartial = () => {
   return (
     <footer className="bg-gray-100 fixed bottom-0 pl-64 text-sm leading-sm flex flex-1 w-full z-30">
       <div className="flex items-center justify-between w-full px-4 py-2 text-sm select-none">
         <div id="copyright">
-          <span className="italic">&copy; {(new Date()).getFullYear()} from agency.io.vn</span>
+          <span className="italic">&copy; {(new Date()).getFullYear()} from&nbsp;
+            <a className="hover:text-sky-500 border-b border-b-transparent hover:border-sky-500" href={appConfigs.authorUrl} target="_blank">agency.io.vn</a>
+          </span>
         </div>
         <div className="footer-tools-bar">
           <ul >

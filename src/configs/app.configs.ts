@@ -8,6 +8,7 @@ const appConfigs = {
     defaultLanguage: 'en',
     supportedLanguages: ['en', 'vi'],
     apiBaseUrl: 'https://api.example.com/v1', // Example API base URL
+    authorUrl: 'https://agency.io.vn'
     // other properties ...
 };
 

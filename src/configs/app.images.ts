@@ -1,5 +1,5 @@
 const appImages = {
-    logo: '/assets/imgs/vite.svg'
+    logo: '/assets/imgs/vite.svg',
 }
 
 export default appImages;
