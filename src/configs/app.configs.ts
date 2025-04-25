@@ -7,9 +7,8 @@ const appConfigs = {
     copyright: `© ${new Date().getFullYear()} Your Company. All rights reserved.`,
     defaultLanguage: 'en',
     supportedLanguages: ['en', 'vi'],
-    apiBaseUrl: 'https://api.example.com/v1', // Example API base URL
-    authorUrl: 'https://agency.io.vn'
-    // other properties ...
+    apiBaseUrl: import.meta.env.VITE_ENDPOINT, // backend endpoint
+    authorUrl: 'https://agency.io.vn',
 };
 
 export default appConfigs;

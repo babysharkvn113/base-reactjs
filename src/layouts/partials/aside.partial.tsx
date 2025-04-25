@@ -1,23 +1,11 @@
-import { appConfigs, appIcons, appImages } from "@configs/index";
+import { appConfigs, appMenuItems, appImages } from "@configs/index";
 import { useUIStore } from "@stores/index";
-import { useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import classNames from "classnames";
 
 const AsidePartial = () => {
   const { asideStatus } = useUIStore();
-
-  useEffect(() => {
-    console.log(`asideStatus=${asideStatus}`);
-  }, [asideStatus]);
-
   // Danh sách menu động
-  const menuItems = [
-    { title: "Dashboard", icon: appIcons.home, path: "/dashboard" },
-    { title: "Products", icon: appIcons.cube, path: "/products" },
-    { title: "Orders", icon: appIcons.list, path: "/orders" },
-    { title: "Customers", icon: appIcons.user, path: "/customers" },
-  ];
 
   return (
     <aside className="select-none outline-none w-full h-full">
@@ -39,7 +27,7 @@ const AsidePartial = () => {
       {/* Sidebar Menu */}
       <nav className="bg-gray-900 h-full text-gray-400 text-base py-4">
         <ul className="text-base leading-base">
-          {menuItems.map((item) => (
+          {appMenuItems.map((item) => (
             <li
               key={item.path}
               className={classNames(
