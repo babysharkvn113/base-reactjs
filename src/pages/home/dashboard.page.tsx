@@ -3,7 +3,7 @@ import { useState } from "react"
 
 
 const DashboardPage = () => {
-  const [content, _] = useState<string>('');
+  const [content] = useState<string>('');
   return (
     <div>
       <TinyMCEComponent content={content}  onContentChange={(newContent:string) => {console.log(newContent)}}/>
