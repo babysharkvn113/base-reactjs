@@ -1,0 +1,28 @@
+{
+    "routes": [
+        {
+            "src": "/",
+            "dest": "/"
+        },
+        {
+            "src": "/users",
+            "dest": "/"
+        },
+        {
+            "src": "/add-user",
+            "dest": "/"
+        },
+        {
+            "src": "/media",
+            "dest": "/"
+        },
+        {
+            "src": "/auth",
+            "dest": "/"
+        },
+        {
+            "src": "/auth",
+            "dest": "/login"
+        }
+    ]
+}
