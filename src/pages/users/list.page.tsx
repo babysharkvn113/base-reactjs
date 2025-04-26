@@ -45,6 +45,7 @@ const UsersListPage = () => {
                                     <th>Id</th>
                                     <th>Email</th>
                                     <th>UserName</th>
+                                    <th>Actions</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -54,13 +55,6 @@ const UsersListPage = () => {
                                             <td>{user.id}</td>
                                             <td>{user.email}</td>
                                             <td>{user.username}</td>
-                                        </tr>
-                                        <tr className="exp">
-                                            <td colSpan={3}>
-                                                <p className="break-words w-128">
-                                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                                                </p>
-                                            </td>    
                                         </tr>
                                     </React.Fragment>
                                 ))}

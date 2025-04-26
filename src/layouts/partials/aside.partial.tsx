@@ -5,8 +5,6 @@ import classNames from "classnames";
 
 const AsidePartial = () => {
   const { asideStatus } = useUIStore();
-  // Danh sách menu động
-
   return (
     <aside className="select-none outline-none w-full h-full">
       {/* Header */}
@@ -27,26 +25,39 @@ const AsidePartial = () => {
       {/* Sidebar Menu */}
       <nav className="bg-gray-900 h-full text-gray-400 text-base py-4">
         <ul className="text-base leading-base">
-          {appMenuItems.map((item) => (
+          {appMenuItems.map((item, index:number) => (
             <li
-              key={item.path}
-              className={classNames(
-                "cursor-pointer text-sm px-4 flex items-center border-l-2 py-2.5 duration-500 bg-gray-800 hover:border-l-blue-500",
-                { "justify-start": asideStatus, "justify-center": !asideStatus }
-              )}
+              key={index}
+              className={`cursor-pointer text-sm flex items-start justify-start flex flex-col w-full`}
             >
               <NavLink
-                className={({ isActive }) =>
-                  classNames("flex items-center gap-4", {
-                    "text-white border-l-blue-500 bg-blue-900": isActive, // Khi active, đổi màu chữ và nền
-                  })
-                }
+                className={`flex items-center px-4 gap-4 py-2.5 border-l-3 border-l-transparent duration-500 hover:border-l-blue-500`}
                 to={item.path}
                 title={`Go to ${item.title}`}
               >
                 <span>{item.icon}</span>
                 {asideStatus && <span>{item.title}</span>}
               </NavLink>
+              {
+                item.children && (
+                  <ul className="bg-gray-500/50 w-full">
+                    {item.children.map((childItem, childIndex:number) => (
+                      <li key={`child-${childIndex}`}>
+                        <NavLink
+                          className={`flex text-sm items-center px-4 gap-4 py-2 border-l-3 duration-500 border-l-transparent hover:border-l-blue-500`}
+                          to={childItem.path}
+                          title={`Go to ${childItem.title}`}
+                        >
+                          <span>{childItem.icon}</span>
+                          {asideStatus && <span>{childItem.title}</span>}
+                        </NavLink>
+                      </li>
+                    ))
+                    }
+
+                  </ul>
+                )
+              }
             </li>
           ))}
         </ul>

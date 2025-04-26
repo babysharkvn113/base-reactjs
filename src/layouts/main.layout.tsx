@@ -13,7 +13,7 @@ const MainLayout = () => {
         <section>
           <aside className={
             `bg-gray-100 fixed top-0 left-0 h-screen transition-transform -translate-x-full sm:translate-x-0 z-40,
-          ${asideStatus ? 'w-64' : 'w-12'}`
+            ${asideStatus ? 'w-64' : 'w-12'}`
           }>
             <AsidePartial />
           </aside>
